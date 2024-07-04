@@ -29,7 +29,13 @@ class CustomCell: UITableViewCell {
         return label
     }()
     
-
+    private lazy var countNotes: UILabel = {
+        let label = UILabel()
+        label.text = "(4)"
+        label.font = .systemFont(ofSize: 10, weight: .semibold)
+        label.textColor = .gray
+        return label
+    }()
     
     // MARK: - LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -46,6 +52,7 @@ class CustomCell: UITableViewCell {
     func setupViews() {
         contentView.addSubview(imageIconView)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(countNotes)
     }
     
     // MARK: - SetupLayouts
@@ -60,11 +67,18 @@ class CustomCell: UITableViewCell {
             make.top.equalTo(14)
             make.leading.equalTo(imageIconView.snp.leading).offset(30)
         }
+        
+        countNotes.snp.makeConstraints { make in
+            make.top.equalTo(19)
+            make.leading.equalTo(nameLabel.snp.trailing).offset(3)
+            //make.trailing.equalTo(-20)
+        }
     
     }
     
     // MARK: - Functions
-    public func configure(label: String) {
+    public func configure(label: String, count: String) {
         nameLabel.text = label
+        countNotes.text = count
     }
 }

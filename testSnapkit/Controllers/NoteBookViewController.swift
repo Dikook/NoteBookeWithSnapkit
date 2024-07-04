@@ -12,6 +12,7 @@ class NoteBookViewController: UIViewController {
     
     // MARK: - Model
     var product = ["Воспоминание", "Входящий", "Идея", "Планы"]
+    var countOfNotes = ["(4)", "(2)", "(5)", "(2)"]
     
     // MARK: - UI
     private lazy var tableView: UITableView = {
@@ -27,7 +28,9 @@ class NoteBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //title = "NoteBooks"
+        title = "NoteBooks" // это title сверху таблицы
+        navigationController?.navigationBar.prefersLargeTitles = true // а это делает его большим и слева ставить
+        
         setupViews()
         setupConstraits()
     }
@@ -58,7 +61,7 @@ extension NoteBookViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell else {
             fatalError("errro with CustomCell")
         }
-        cell.configure(label: product[indexPath.row])
+        cell.configure(label: product[indexPath.row], count: countOfNotes[indexPath.row])
         
         return cell
     }
