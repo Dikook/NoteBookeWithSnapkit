@@ -8,7 +8,10 @@
 import UIKit
 import SnapKit
 
-final class NoteBookViewController: UIViewController {
+class NoteBookViewController: UIViewController {
+    
+    // MARK: - Model
+    var product = ["Воспоминание", "Входящий", "Идея", "Планы"]
     
     // MARK: - UI
     private lazy var tableView: UITableView = {
@@ -48,13 +51,14 @@ final class NoteBookViewController: UIViewController {
 extension NoteBookViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        product.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell else {
             fatalError("errro with CustomCell")
         }
+        cell.configure(label: product[indexPath.row])
         
         return cell
     }

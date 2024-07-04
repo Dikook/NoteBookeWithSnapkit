@@ -29,6 +29,7 @@ class CustomCell: UITableViewCell {
         return label
     }()
     
+
     
     // MARK: - LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -60,5 +61,10 @@ class CustomCell: UITableViewCell {
             make.leading.equalTo(imageIconView.snp.leading).offset(30)
         }
     
+    }
+    
+    // MARK: - Functions
+    public func configure(label: String) {
+        nameLabel.text = label
     }
 }
