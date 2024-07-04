@@ -10,14 +10,12 @@ import SnapKit
 
 final class NoteBookViewController: UIViewController {
     
-    // MARK: - Variables
-    var product = ["Входящий", "Идея", "Планы"]
-    
     // MARK: - UI
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseID")
+        tableView.register(CustomCell.self, forCellReuseIdentifier: CustomCell.identifier)
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
     
@@ -26,6 +24,7 @@ final class NoteBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //title = "NoteBooks"
         setupViews()
         setupConstraits()
     }
@@ -46,17 +45,17 @@ final class NoteBookViewController: UIViewController {
 
 
 // MARK: - Extension
-extension NoteBookViewController: UITableViewDataSource {
+extension NoteBookViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        product.count
+        4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseID", for: indexPath)
-        cell.textLabel?.text = product[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell else {
+            fatalError("errro with CustomCell")
+        }
+        
         return cell
     }
 }
-
-

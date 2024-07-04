@@ -14,12 +14,12 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
-        let vc1 = UINavigationController(rootViewController: NoteViewController())
-        let vc2 = UINavigationController(rootViewController: NoteBookViewController())
+        let vc1 = UINavigationController(rootViewController: NoteBookViewController())
+        let vc2 = UINavigationController(rootViewController: NoteViewController())
         let vc3 = UINavigationController(rootViewController: SettingsViewController())
         
         vc1.tabBarItem.title = "Note"
-        vc2.tabBarItem.title = "NoteBook"
+        vc2.tabBarItem.title = "NoteBooks"
         vc3.tabBarItem.title = "Settings"
         
         vc1.tabBarItem.image = UIImage(systemName: "note")

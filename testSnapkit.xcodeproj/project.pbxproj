@@ -16,6 +16,7 @@
 		8F79CCA92C36A0460080580C /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79CCA82C36A0460080580C /* NoteViewController.swift */; };
 		8F79CCAB2C36A04D0080580C /* NoteBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79CCAA2C36A04D0080580C /* NoteBookViewController.swift */; };
 		8F79CCAD2C36A0530080580C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79CCAC2C36A0530080580C /* SettingsViewController.swift */; };
+		8F93AFDA2C36AB1800362A30 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F93AFD92C36AB1800362A30 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8F79CCA82C36A0460080580C /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		8F79CCAA2C36A04D0080580C /* NoteBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBookViewController.swift; sourceTree = "<group>"; };
 		8F79CCAC2C36A0530080580C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8F93AFD92C36AB1800362A30 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				8F79CCA72C36A00E0080580C /* Controllers */,
+				8F93AFD92C36AB1800362A30 /* CustomCell.swift */,
 				8F79CC8B2C369C5C0080580C /* AppDelegate.swift */,
 				8F79CC8D2C369C5C0080580C /* SceneDelegate.swift */,
 				8F79CC8F2C369C5C0080580C /* MainTabBarViewController.swift */,
@@ -164,6 +167,7 @@
 				8F79CC902C369C5C0080580C /* MainTabBarViewController.swift in Sources */,
 				8F79CC8C2C369C5C0080580C /* AppDelegate.swift in Sources */,
 				8F79CC8E2C369C5C0080580C /* SceneDelegate.swift in Sources */,
+				8F93AFDA2C36AB1800362A30 /* CustomCell.swift in Sources */,
 				8F79CCAD2C36A0530080580C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
