@@ -14,8 +14,8 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
-        let vc1 = UINavigationController(rootViewController: NoteBookViewController())
-        let vc2 = UINavigationController(rootViewController: NoteViewController())
+        let vc1 = UINavigationController(rootViewController: NoteViewController())
+        let vc2 = UINavigationController(rootViewController: NoteBookViewController())
         let vc3 = UINavigationController(rootViewController: SettingsViewController())
         
         vc1.tabBarItem.title = "Note"

@@ -65,4 +65,8 @@ extension NoteBookViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "4 NOTEBOOKS"
+    } // title for header section это то что сейчас мне нужно :)
 }
