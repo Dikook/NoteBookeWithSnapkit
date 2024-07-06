@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F24B3E32C39462900536CCA /* NoteViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24B3E22C39462900536CCA /* NoteViewCustomCell.swift */; };
 		8F79CC8C2C369C5C0080580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79CC8B2C369C5C0080580C /* AppDelegate.swift */; };
 		8F79CC8E2C369C5C0080580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79CC8D2C369C5C0080580C /* SceneDelegate.swift */; };
 		8F79CC902C369C5C0080580C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79CC8F2C369C5C0080580C /* MainTabBarViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F24B3E22C39462900536CCA /* NoteViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteViewCustomCell.swift; path = Controllers/NoteViewCustomCell.swift; sourceTree = "<group>"; };
 		8F79CC882C369C5C0080580C /* testSnapkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testSnapkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F79CC8B2C369C5C0080580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F79CC8D2C369C5C0080580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				8F79CCA72C36A00E0080580C /* Controllers */,
+				8F24B3E22C39462900536CCA /* NoteViewCustomCell.swift */,
 				8F93AFD92C36AB1800362A30 /* CustomCell.swift */,
 				8F79CC8B2C369C5C0080580C /* AppDelegate.swift */,
 				8F79CC8D2C369C5C0080580C /* SceneDelegate.swift */,
@@ -169,6 +172,7 @@
 				8F79CC8E2C369C5C0080580C /* SceneDelegate.swift in Sources */,
 				8F93AFDA2C36AB1800362A30 /* CustomCell.swift in Sources */,
 				8F79CCAD2C36A0530080580C /* SettingsViewController.swift in Sources */,
+				8F24B3E32C39462900536CCA /* NoteViewCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
