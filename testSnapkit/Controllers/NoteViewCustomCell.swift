@@ -17,13 +17,13 @@ class NoteViewCustomCell: UITableViewCell {
     // MARK: - UI contructors
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Title"
+        label.text = "Title - 1"
         return label
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "description"
+        label.text = "description - 1"
         label.font = .systemFont(ofSize: 10, weight: .semibold)
         label.textColor = .gray
         return label

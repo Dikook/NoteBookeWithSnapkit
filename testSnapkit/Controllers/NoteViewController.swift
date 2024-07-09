@@ -11,11 +11,12 @@ import SnapKit
 class NoteViewController: UIViewController {
     
     // MARK: - Product
-    var product = ["1", "2", "3"]
+    var titleProduct = ["приложение", "Айкумыс", "Ерс"]
+    var descriptionProduct = ["как же это много", "узнать основы", "квартира"]
     
     // MARK: - UI
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(NoteViewCustomCell.self, forCellReuseIdentifier: NoteViewCustomCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
@@ -50,17 +51,19 @@ class NoteViewController: UIViewController {
     // MARK: - Extension
 extension NoteViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        4
+//    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         3
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NoteViewCustomCell.identifier, for: indexPath)
-        //cell.textLabel?.text = mobileBrand[indexPath.section].description[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteViewCustomCell.identifier, for: indexPath) as? NoteViewCustomCell else {
+            fatalError("Error with Custom Cell- 2")
+        }
+        cell.configure(title: titleProduct[indexPath.row], description: descriptionProduct[indexPath.row])
         
         return cell
     }
