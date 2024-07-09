@@ -11,7 +11,7 @@ import SnapKit
 class NoteViewController: UIViewController {
     
     // MARK: - Product
-    var titleProduct = ["приложение", "Айкумыс", "Ерс"]
+    var titleProduct = ["Приложение", "Айкумыс", "Ерс"]
     var descriptionProduct = ["как же это много", "узнать основы", "квартира"]
     
     // MARK: - UI

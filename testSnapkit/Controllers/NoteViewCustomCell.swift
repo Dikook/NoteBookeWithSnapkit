@@ -18,13 +18,14 @@ class NoteViewCustomCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Title - 1"
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         return label
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "description - 1"
-        label.font = .systemFont(ofSize: 10, weight: .semibold)
+        label.font = .systemFont(ofSize: 14, weight: .semibold)
         label.textColor = .gray
         return label
     }()
